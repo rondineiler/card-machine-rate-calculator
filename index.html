@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculo de taxas</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<div class="box">
+		<h3>Simulador de Taxas</h3>
+		<div class="text-center">
+			<img src="https://maquininhasmultimarcas.com.br/wp-content/uploads/2020/11/maquininhas-cartao-volta-redonda-minizinha-pagseguro-sumup-top-point-mini-12.png">
+		</div>
+		<div class="row align-items-center">
+			<div class="col-sm"><!-- Inicio Coluna 1-->
+				<form>
+					<div class="form-group">
+					    <label for="exampleFormControlSelect1">Escolha a marca</label>
+					    <select class="form-control" id="marca" onChange="mudarMarca()">
+					    	<option value="selecioneM">Selecione a marca</option>
+					    	<option value="mercadopago">Point Mini | Mercado Pago</option>
+					      	<option value="sumup">Sumup TOP | Sumup</option>
+					      	<option value="pagseguro">Minizinha NFC | Pag Seguro</option>
+					      	<option value="pagseguro">Minizinha Chip 2 | Pag Seguro</option>
+					      	<option value="pagseguro">Moderninha Pro 2 | Pag Seguro</option>
+					    </select>
+					</div>
+					<div class="form-group">
+						<label for="exampleFormControlSelect1">Escolha um plano de taxa</label>
+					    <select class="form-control" id="periodo" onChange="mudarPeriodo()">
+					      <option value="nahora" id="per1"></option>
+					      <option value="14d" id="per2"></option>
+					      <option value="30d" id="per3"></option>
+					    </select>
+					</div>
+					<div class="form-group">
+						<label for="exampleFormControlSelect1">Escolha as parcelas</label>
+						<select class="form-control" id="parcela" onChange="mudarParcela()">
+							<option value="0" id="d1"></option>
+							<option value="1" id="p1"></option>
+							<option value="2" id="p2"></option>
+							<option value="3" id="p3"></option>
+							<option value="4" id="p4"></option>
+							<option value="5" id="p5"></option>
+							<option value="6" id="p6"></option>
+							<option value="7" id="p7"></option>
+							<option value="8" id="p8"></option>
+							<option value="9" id="p9"></option>
+							<option value="10" id="p10"></option>
+							<option value="11" id="p11"></option>
+							<option value="12" id="p12"></option>
+						</select>
+					</div>
+					<div class="form-group" id="formulario">
+						<label for="exampleFormControlInput1">Digite o valor da venda</label>
+						<input type="valor" class="form-control" id="valorCampo" placeholder="R$" onkeyup="calcularTaxa()">
+					</div>
+				</form>
+			</div><!-- Fim Coluna 1 -->
+			<div class="col-sm"><!-- Incicio Coluna 2-->
+				<div class="resultado">
+					<h5>Você Recebe:</h5>
+					<span>R$</span>
+					<span class="valor-final"></span>
+				</div>
+			</div><!-- Fim Coluna 2-->
+		</div>
+	</div>
+	<script src="scripts/main.js"></script>
+	<!--
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+	-->
+</body>
+</html>
