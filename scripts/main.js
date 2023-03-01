@@ -15,8 +15,6 @@ var listaIdsParcelas = ["#d1","#p1","#p2","#p3","#p4","#p5","#p6","#p7","#p8","#
 mudarMarca();
 calcularTaxa();
 
-//const combo1 = document.querySelector(3);
-//combo1.textContent = "OI";
 function popularPeriodo(){
 	for (var i = 0; i < listaIdsPeriodos.length; i++) {
 		listaPeriodos[i] = document.querySelector(listaIdsPeriodos[i]);
